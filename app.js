@@ -1,4 +1,4 @@
- let myList = document.getElementById("todo-list")       // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
+let myList = document.getElementById("todo-list")       // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
 
 let arrayOfTodos = [
     {
@@ -48,6 +48,42 @@ myList.append("User ID: ", userIdInsert, Text, "ID: ", IDInsert, Text, "complete
 
 // });
 };
+const filterTODOS = () => {
+    console.log('filterTodos') 
+    let newList = document.getElementById("todo-list").innerHTML = ""
+    let inputElement = document.querySelector("id-input")
+    console.log('inputElement', inputElement)
+    let inputValue = document.querySelector("input").value;
+    console.log("inputValue", inputValue)
+}
+
+
+
+
+const filterArrayOfTodos = arrayOfTodos.filter(personId => personId.userId <= 10)
+
+console.log('filterArrayOfTodos', filterArrayOfTodos)
+let newFilterList = document.getElementById('todo-list')
+for (let i = 0; i <filterArrayOfTodos.length;i++) {
+    const todo = filterArrayOfTodos[i];
+    let userId = document.createElement('li')
+    userId.innerHTML = todo.userId
+    newFilterList.appendChild(userId)
+}
+
+// const filterTODOS = () => {
+//     // console.log('filterTodos') 
+//     document.getElementById("todo-list").innerHTML = ""
+//     let inputElement = document.querySelector("#id-input")
+//     console.log('inputElement', inputElement)
+//     let inputValue = document.querySelector("input").value;
+//     console.log("inputValue", inputValue)
+// }
+
+// let inputValue = document.querySelector("input").value;
+// console.log("inputValue", inputValue) 
+
+
 
 console.log(arrayOfTodos[0].userId)
 console.log(arrayOfTodos[1].userId)
