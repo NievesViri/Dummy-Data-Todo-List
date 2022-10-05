@@ -51,7 +51,7 @@ myList.append("User ID: ", userIdInsert, Text, "ID: ", IDInsert, Text, "complete
 const filterTODOS = () => {
     console.log('filterTodos') 
     let newList = document.getElementById("todo-list").innerHTML = ""
-    let inputElement = document.querySelector("id-input")
+    let inputElement = document.getElementById("id-input")
     console.log('inputElement', inputElement)
     let inputValue = document.querySelector("input").value;
     console.log("inputValue", inputValue)
@@ -66,7 +66,7 @@ console.log('filterArrayOfTodos', filterArrayOfTodos)
 let newFilterList = document.getElementById('todo-list')
 for (let i = 0; i <filterArrayOfTodos.length;i++) {
     const todo = filterArrayOfTodos[i];
-    let userId = document.createElement('li')
+    let userId = document.createElement('LI')
     userId.innerHTML = todo.userId
     newFilterList.appendChild(userId)
 }
