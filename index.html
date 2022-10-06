@@ -13,11 +13,12 @@
     <div class="filterRow">
         <label for="UserIdChoice">Filter by User Id</label>
     <input type="number" name="UserIdChoice" id="id-input" min="1" max="10">
-    <button onclick="filterTODOS(onclick)">Filter Todos</button>
+    <button onclick="filterTODOS()">Filter Todos</button>
     </div>
     <div class="complete">
-        <button onclick="completedTodos(onclick)">Completed</button>
-        <button onclick="incompleteTodos(onclick)">Incomplete</button>
+        <button onclick="completedTodos()">Completed Todos</button>
+        <button onclick="incompleteTodos()">Incompleted Todos</button>
+        <button onclick="removeTodos()">Clear</button>
     </div>
 
     <ol id="todo-list">
